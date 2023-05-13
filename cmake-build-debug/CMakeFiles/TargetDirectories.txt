@@ -1,0 +1,3 @@
+F:/mehmetsah/cmake-build-debug/CMakeFiles/mehmetsah.dir
+F:/mehmetsah/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/mehmetsah/cmake-build-debug/CMakeFiles/rebuild_cache.dir
