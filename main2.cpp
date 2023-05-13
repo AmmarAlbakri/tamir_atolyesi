@@ -282,18 +282,17 @@ public:
 
     void TamirEt()
     {
-        double saat = 8.0;
+        double saat = 08.00;
         bool infiniteTime = false;
 
         while (saat < 20.00)
         {
-            while (!mekanikBekleme.empty() || !elektrikBekleme.empty() || !kaportaBekleme.empty())
-            {
-                bool tamirBitti = true;
+            
+                bool tamirBitti = false;
 
                 if (!mekanikBekleme.empty())
                 {
-                    tamirBitti = false;
+                    tamirBitti = true;
                     Arac *tamirEdilen = mekanikBekleme.front();
                     mekanikBekleme.pop();
                     cout << saat <<      " - " << tamirEdilen->plaka << " araci mekanik istasyonda tamir ediliyor." << endl;
@@ -320,7 +319,7 @@ public:
 
                 if (!elektrikBekleme.empty())
                 {
-                    tamirBitti = false;
+                    tamirBitti = true;
                     Arac *tamirEdilen = elektrikBekleme.front();
                     elektrikBekleme.pop();
                     cout << saat << ":" << tamirEdilen->plaka << " araci elektrik istasyonda tamir ediliyor." << endl;
@@ -347,7 +346,7 @@ public:
 
                 if (!kaportaBekleme.empty())
                 {
-                    tamirBitti = false;
+                    tamirBitti = true;
                     Arac *tamirEdilen = kaportaBekleme.front();
                     kaportaBekleme.pop();
                     cout << saat << ":" << tamirEdilen->plaka << " araci kaporta istasyonda tamir ediliyor." << endl;
@@ -379,7 +378,6 @@ public:
             }
             incrTime(saat);
         }
-    }
 };
 
 
